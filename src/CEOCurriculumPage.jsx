@@ -175,6 +175,36 @@ export default function CEOCurriculumPage() {
         >
           ✕
         </button>
+{/* Buttons */}
+<div className="mt-6 flex flex-col sm:flex-row gap-3">
+  <a
+    href="https://www.studioofruth.com/creative-ceo-2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full px-4 py-2 text-center text-white text-sm font-medium"
+    style={{ background: 'var(--brand-amber)' }}
+  >
+    Open Secure Form
+  </a>
+
+  <a
+    href="https://studioofruth.com/creative-ceo-2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full px-4 py-2 text-sm border text-center"
+    style={{ borderColor: '#d4d4d4' }}
+  >
+    Try Alternate Link
+  </a>
+
+  <button
+    onClick={() => setOpen(false)}
+    className="rounded-full px-4 py-2 text-sm border"
+    style={{ borderColor: '#d4d4d4' }}
+  >
+    Not now
+  </button>
+</div>
       </div>
 
       {/* Buttons */}
