@@ -156,29 +156,59 @@ export default function CEOCurriculumPage() {
       </footer>
 
       {/* MODAL */}
-      {open && (
-        <div className="fixed inset-0 z-50 bg-black/40 grid place-items-center p-4">
-          <div className="w-full max-w-lg rounded-2xl bg-white shadow-xl border border-neutral-200 p-6">
-            <div className="flex items-start justify-between gap-6">
-              <div>
-                <h3 className="text-lg font-semibold">Request the Full Curriculum</h3>
-                <p className="mt-1 text-sm text-neutral-600">Tell us about your school or student. We’ll follow up with access instructions (NDA required).</p>
-              </div>
-              <button onClick={() => setOpen(false)} className="text-neutral-400 hover:text-neutral-600">✕</button>
-            </div>
-            {!sent ? (
-              <div className="mt-6 w-full h-[650px]">
-                <iframe
-                  src="https://www.studioofruth.com/creative-ceo-2"
-                  className="w-full h-full rounded-xl border border-neutral-300"
-                />
-              </div>
-            ) : (
-              <div className="mt-6">
-                <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">Thank you! We’ll follow up shortly.</div>
-                <div className="mt-4 text-xs text-neutral-500">Need to reach us sooner? Email <a className="underline" href="mailto:info@studioofruth.com">info@studioofruth.com</a>.</div>
-              </div>
-            )}
+    {open && (
+  <div className="fixed inset-0 z-50 bg-black/40 grid place-items-center p-4">
+    <div className="w-full max-w-lg rounded-2xl bg-white shadow-xl border border-neutral-200 p-6">
+
+      {/* Header */}
+      <div className="flex items-start justify-between gap-6">
+        <div>
+          <h3 className="font-serif text-lg font-semibold">Request the Full Curriculum</h3>
+          <p className="mt-1 text-sm text-neutral-600">
+            For privacy and security, the request form opens in a new tab. Complete it to receive
+            access instructions (NDA required).
+          </p>
+        </div>
+        <button
+          onClick={() => setOpen(false)}
+          className="text-neutral-400 hover:text-neutral-600"
+        >
+          ✕
+        </button>
+      </div>
+
+      {/* Buttons */}
+      <div className="mt-6 flex flex-col sm:flex-row gap-3">
+        <a
+          href="https://www.studioofruth.com/creative-ceo-2#form"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full px-4 py-2 text-center text-white text-sm font-medium"
+          style={{ background: 'var(--brand-amber)' }}
+        >
+          Open Secure Form
+        </a>
+
+        <button
+          onClick={() => setOpen(false)}
+          className="rounded-full px-4 py-2 text-sm border"
+          style={{ borderColor: '#d4d4d4' }}
+        >
+          Not now
+        </button>
+      </div>
+
+      {/* Support */}
+      <p className="mt-3 text-xs text-neutral-500">
+        Prefer email? Contact{" "}
+        <a className="underline" href="mailto:info@studioofruth.com">
+          info@studioofruth.com
+        </a>.
+      </p>
+
+    </div>
+  </div>
+)}
           </div>
         </div>
       )}
